@@ -7,6 +7,7 @@ import {
   useColorScheme,
 } from 'react-native';
 import FlatCards from './components/FlatCards';
+import ScrollableCards from './components/ScrollableCards';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -15,12 +16,13 @@ const App = () => {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <FlatCards />
+        <ScrollableCards />
       </ScrollView>
     </SafeAreaView>
   );
 };
-export default App;
 
+export default App;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#333',
